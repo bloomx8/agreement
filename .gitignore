@@ -1,0 +1,5 @@
+nbproject/
+# ignore all javascript files and only save the php and typescript file.
+# This is because each time you run tsc on this project, it recreates new javascript
+# each files
+*.js

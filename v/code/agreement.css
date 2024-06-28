@@ -1,0 +1,138 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    border-radius: 5px;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 28% 49% 23%;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: 
+    "header header header"
+    "services content event"
+    "services content message"
+}
+
+#header {
+    grid-area: header;
+    flex-direction: row;
+    background-color: rgba(42, 100, 201, 0.253);
+    text-align: center;
+    padding-left: 500px;
+}
+
+#services {
+    grid-area: services;
+    background-color:rgba(42, 100, 201, 0.253) ;
+    line-height: 1.5;
+    overflow: auto;
+    resize: horizontal;
+    text-align: left;
+
+    
+}
+
+#content {
+    grid-area: content;
+    background-color:rgba(24, 38, 233, 0.068) ;
+    overflow: auto;
+}
+
+
+#event {
+    grid-area: event;
+    background-color:rgba(42, 100, 201, 0.253) ;
+    text-align: center;
+    overflow: auto;
+    resize: both;
+    /* allows one to resize the grid area horizontally and vertically */
+    min-width: 220px;
+    max-width: 800px;
+    min-height: 138px;
+    max-height: 280px;
+}
+
+#message {
+    grid-area: message;
+    background-color:rgba(42, 100, 201, 0.253) ;
+    text-align: center;
+    overflow: auto;
+    resize: both;
+    /* allows one to resize the grid area horizontally and vertically  */
+    min-width: 220px;
+    max-width: 800px;
+    min-height: 138px;
+    max-height: 300px;
+}
+
+fieldset{
+    width:300px;
+    height:30px;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    padding-right: 600px;
+}
+.agreement{
+    margin-left:30px;
+    width:600px;
+    color:maroon;
+}
+.agreement div{
+    margin-left: 30px;
+}
+#extractbutton{
+    padding: 10px 20px; 
+    margin-left: 780px; 
+    font-size: 16px;
+    margin-top: -30px
+}
+
+/*
+Highlight sections of the document that change from client to client
+*/
+*[data-id]{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*indenting the children of the details*/
+details details summary{
+    margin-left: 20px;
+}
+/* class to select a white background*/
+ .selected {
+    background-color:white;
+}
+/* To add a hover effect for each summary element */
+summary:hover {
+    /* Light gray background on hover */
+     background-color: lightgray;  
+    /*maroon text color on hover */
+     color: maroon; 
+}
+
+/*To put a hover effect on the data IDs*/
+[data-id]:hover{
+    /*adding a  purple background on hover*/
+    background-color: rgba(128, 0, 128, 0.678);
+    /*white text colour on hover*/
+    color: white;
+}
+
+/*additional styling on the data-id hover*/
+[data-id]:hover::after{
+    /* Display the value of data-id */
+    content: attr(data-id); 
+}

@@ -1,0 +1,43 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100dvh;
+    background-color: bisque;
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr;
+}
+
+header, footer {
+    background-color: #3f693f;
+    color:#222; /* Neon green color */
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    /* gap: 10%; */
+    /* padding: 20px; */
+    margin: 20px;
+    text-align: center;
+    background-color: aqua;
+    border: 10px solid #222;
+}
+
+main div{
+    border: 2px solid #222;
+}
+
+main div:nth-child(odd){
+    background-color:aliceblue
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+}
